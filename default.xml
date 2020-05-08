@@ -22,8 +22,8 @@
   <project remote="freescale" revision="zeus" name="meta-freescale-3rdparty" path="sources/meta-freescale-3rdparty"/>
   <project remote="freescale" revision="zeus" name="meta-freescale-distro" path="sources/meta-freescale-distro"/>
   <project remote="freescale" revision="zeus" name="Documentation" path="sources/Documentation"/>
-  <project remote="vnet" name="meta-technexion-bsp" path="sources/meta-technexion-bsp" revision="master" >
-     <copyfile src="tools/tn-setup-release.sh" dest="tn-setup-release.sh"/>
+  <project remote="vnet" name="meta-vnet-bsp" path="sources/meta-vnet-bsp" revision="zeus" >
+     <copyfile src="tools/vnet-setup-release.sh" dest="vnet-setup-release.sh"/>
   </project>
 
 </manifest>
