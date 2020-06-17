@@ -20,7 +20,9 @@
   <project remote="QT5" revision="3601fd2c5306ac6d5d0d536e0be8cbb90da9b4c1" upstream="morty" name="meta-qt5" path="sources/meta-qt5"/>
   <project remote="OSSystems" revision="7d37ae2adec5cc5ea27367ce125bc7bce2310ca1" upstream="morty" name="meta-browser" path="sources/meta-browser"/>
 
-  <project remote="vnet" revision="b78fa4859fcc3935bded9052518c9149a5db1caf" upstream="master" name="vnet-base" path="sources/base"/>
+  <project remote="vnet" revision="b78fa4859fcc3935bded9052518c9149a5db1caf" upstream="master" name="vnet-base" path="sources/base">
+	<copyfile dest="setup-environment" src="setup-environment"/>
+  </project>
 
   <project remote="vnet" revision="f4fa5d8b079ef65c1304eeaca171ed87a64779fa" upstream="myzr" name="meta-vnet-bsp" path="sources/meta-vnet-bsp">
 	<copyfile src="tools/vnet-setup-release.sh" dest="vnet-setup-release.sh"/>
