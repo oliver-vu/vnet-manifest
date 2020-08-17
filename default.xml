@@ -3,35 +3,35 @@
 
   <default sync-j="2"/>
 
+  <remote fetch="https://github.com/TechNexion" name="edm-release" />
+  <remote fetch="https://source.codeaurora.org/external/imx" name="fsl-release" />
   <remote fetch="git://git.yoctoproject.org" name="yocto"/>
   <remote fetch="git://github.com/Freescale" name="freescale"/>
   <remote fetch="git://git.openembedded.org" name="oe"/>
   <remote fetch="git://github.com/OSSystems" name="OSSystems"/>
   <remote fetch="git://github.com/meta-qt5"  name="QT5"/>
-  <remote fetch="https://source.codeaurora.org/external/imx" name="fsl-release" />
-  <remote fetch="https://github.com/TechNexion" name="edm-release" />
 
-  <project remote="yocto" revision="73cc31c11a9d75a2f4204a9a8c6832c6e505a86a" name="poky" path="sources/poky"/>
-  <project remote="yocto" revision="e2254e7b2ded0c2b66b1226f879b3a6d52037b2d" name="meta-fsl-arm" path="sources/meta-fsl-arm"/>
+  <project remote="yocto" revision="dd0ba9ea4a11ab15348d4fe3574e4b28784db82f" name="poky" path="sources/poky"/>
+  <project remote="yocto" revision="35b8b9bd9863de208ab60e33b55f10ee43e2619b" name="meta-fsl-arm" path="sources/meta-fsl-arm"/>
 
-  <project remote="oe" revision="55c8a76da5dc099a7bc3838495c672140cedb78e" name="meta-openembedded" path="sources/meta-openembedded"/>
+  <project remote="oe" revision="ad6133a2e95f4b83b6b3ea413598e2cd5fb3fd90" name="meta-openembedded" path="sources/meta-openembedded"/>
 
-  <project remote="freescale" revision="krogoth" name="fsl-community-bsp-base" path="sources/base">
-     <copyfile dest="README" src="README"/>
-     <copyfile dest="setup-environment" src="setup-environment"/>
+  <project remote="freescale" revision="3a9c59399dbcf4790578125f016c6e86aff43367" name="fsl-community-bsp-base" path="sources/base">
+        <copyfile dest="README" src="README"/>
+        <copyfile dest="setup-environment" src="setup-environment"/>
   </project>
 
-  <project remote="freescale" revision="2c28e636ec15c2cfd49bc9cebe0bbbcfde95bc7b" name="meta-freescale-3rdparty" path="sources/meta-freescale-3rdparty"/>
-  <project remote="freescale" revision="a165068f8a0d1cf29aabe4b4053f28be1c2aa492" name="meta-freescale-distro" path="sources/meta-freescale-distro"/>
+  <project remote="freescale" revision="e200df91b70da254461c59082ddd5db0a3c415a2" name="meta-fsl-arm-extra" path="sources/meta-fsl-arm-extra"/>
+  <project remote="freescale" revision="2231e946e7a94d096394f2b2477e8184c9bbde7b" name="meta-fsl-demos" path="sources/meta-fsl-demos"/>
 
-  <project remote="OSSystems" revision="393d2aa15da21ffa532c3cd77d8cb91de997cd31" name="meta-browser" path="sources/meta-browser" />
-  <project remote="QT5" revision="dcfcb581ec65ef1b96f4840a81ea9d9f2297b394" name="meta-qt5" path="sources/meta-qt5" />
+  <project remote="OSSystems" revision="77736988073a5d90fcff9d0005c8477332ede387" name="meta-browser" path="sources/meta-browser" />
+  <project remote="QT5" revision="d5536e34ec985c82b621448ab4325e5cbba38560" name="meta-qt5" path="sources/meta-qt5" />
 
-  <project remote="fsl-release" revision="90399d99af8a2660ebe50b49752e95b210239fd9" name="meta-fsl-bsp-release" path="sources/meta-fsl-bsp-release" />
+  <project remote="fsl-release" name="meta-fsl-bsp-release" path="sources/meta-fsl-bsp-release" revision="jethro_4.1.15-1.0.0_ga" />
 
-  <project remote="edm-release" revision="0b53b50b9bfe770bef9a231d5b2c7fd4dd58b006" name="meta-edm-bsp-release" path="sources/meta-edm-bsp-release" >
-     <linkfile src="tools/edm-setup-release.sh" dest="edm-setup-release.sh"/>
-     <linkfile src="README" dest="README-Technexion-BSP"/>
+  <project remote="edm-release" name="meta-edm-bsp-release" path="sources/meta-edm-bsp-release" revision="8b47607ba56f57854384d53e2e78f56e3fa41b27" >
+     <copyfile src="tools/edm-setup-release.sh" dest="edm-setup-release.sh"/>
+     <copyfile src="README" dest="README-Technexion-BSP"/>
   </project>
 
 </manifest>
